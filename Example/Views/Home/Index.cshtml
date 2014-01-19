@@ -1,0 +1,61 @@
+﻿@using SMSOverEmail
+
+@model Example.Controllers.PhoneViewModel
+
+@{
+    ViewBag.Carriers = new SelectList(CarrierInfo.Carriers, "Carrier", "Name");
+    ViewBag.Title = "Home Page";
+
+
+    bool hasSuccess = false;
+    string successMessage = "";
+
+    try
+    {
+        successMessage = ViewBag.Success;
+        hasSuccess = !string.IsNullOrEmpty(successMessage);
+    }
+    catch { }
+}
+
+<div class="jumbotron">
+    <h1>SMSOverEmailExtensions</h1>
+    <p class="lead">This library sends text messages via E-mail. Give it a try now by sending using this page. </p>
+</div>
+
+@if (hasSuccess)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info">@successMessage</div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.Phone, null, new { @class = "form-control", placeholder = "Phone Number" })
+            </div>
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.Carrier, (IEnumerable<SelectListItem>)ViewBag.Carriers, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(model => model.Subject, null, new { @class = "form-control", placeholder = "Subject" })
+            </div>
+            <div class="form-group">
+                @Html.TextAreaFor(model => model.Body, new { @class = "form-control", placeholder = "Body" })
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-default" />
+        }
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

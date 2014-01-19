@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSOverEmailExtensions", "SMSOverEmailExtensions\SMSOverEmailExtensions.csproj", "{C59D6E65-F02C-481F-8084-79F39D542352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{253C7121-227F-43FE-AA74-5D9645BF997F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C59D6E65-F02C-481F-8084-79F39D542352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59D6E65-F02C-481F-8084-79F39D542352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59D6E65-F02C-481F-8084-79F39D542352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59D6E65-F02C-481F-8084-79F39D542352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253C7121-227F-43FE-AA74-5D9645BF997F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253C7121-227F-43FE-AA74-5D9645BF997F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253C7121-227F-43FE-AA74-5D9645BF997F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253C7121-227F-43FE-AA74-5D9645BF997F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
