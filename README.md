@@ -32,7 +32,9 @@ Usage
 --------------------
 To use the library, simply include the library at the top of the file:
 
+```CSharp
 using SMSOverEmail;
+```
 
 Instantiate System.Net.Mail.MailMessage and start setting your to values:
 
