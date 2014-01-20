@@ -40,13 +40,14 @@ To use the library, simply include the library at the top of the file:
 using SMSOverEmail;
 ```
 
-Instantiate System.Net.Mail.MailMessage and start setting your to values:
+Instantiate System.Net.Mail.MailMessage and start setting your to values using convenient extension methods:
 
 ```CSharp
 // Send the message
 MailMessage message = new MailMessage();
 
-message.AddToSMS("5555555555555, Carrier.ATT);
+message.AddToSMS("5555555555555", Carrier.ATT);
+message.SetFromSMS("5555555556", Carrier.ATT);
 message.Subject = "Example Subject";
 message.SetBody("Example Body");
 
