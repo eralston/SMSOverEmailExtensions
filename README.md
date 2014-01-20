@@ -24,9 +24,13 @@ Finally, it includes a small generator app that can creates code for the carrier
 
 Installation
 --------------------
-Download, build, and include in project.
+The easy way is to install via NuGet:
 
-NuGet deploument forthcoming.
+```
+Install-Package SMSOverEmailExtensions
+```
+
+Conversely, you may download the Git repo, then open "SMSOverEmailExtensions.sln" in Visual Studio, build the "SMSOverEmailExtensions" project and reference the output DLL in your project.
 
 Usage
 --------------------
@@ -48,9 +52,3 @@ message.SetBody("Example Body");
 
 message.SendMailSmtp();
 ```
-
-
-
-
-
-
