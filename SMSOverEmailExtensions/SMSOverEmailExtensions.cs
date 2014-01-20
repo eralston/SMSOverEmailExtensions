@@ -30,5 +30,19 @@ namespace SMSOverEmail
             // Add it to the message
             message.AddTo(emailForPhoneAndCarrier, displayName);
         }
+
+        /// <summary>
+        /// Sets the "From" field as an SMS e-mail mapping
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="address"></param>
+        /// <param name="displayName"></param>
+        public static void SetFromSMS(this MailMessage message, string phoneNumber, Carrier carrier, string displayName = null)
+        {
+            // Map the phone number + carrier into an e-mail address
+            string emailForPhoneAndCarrier = CarrierInfo.GetSMSAddress(phoneNumber, carrier);
+            // Add it to the message
+            message.SetFrom(emailForPhoneAndCarrier, displayName);
+        }
     }
 }

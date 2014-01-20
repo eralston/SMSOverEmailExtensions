@@ -46,6 +46,8 @@ namespace Example.Controllers
                 message.Subject = model.Subject;
                 message.SetBody(model.Body);
 
+                message.SendMailSmtp();
+
                 // Tell the user about it
                 string email = CarrierInfo.GetSMSAddress(model.Phone, model.Carrier);
                 string userMsg = string.Format("Successfully sent e-mail to {0}", email);
