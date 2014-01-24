@@ -49,8 +49,8 @@ Instantiate System.Net.Mail.MailMessage and start setting your to values using c
 // Send the message
 MailMessage message = new MailMessage();
 
-message.AddToSMS("5555555555555", Carrier.ATT);
-message.SetFromSMS("5555555556", Carrier.ATT);
+message.AddToSMS("5555555555555", Carrier.ATTWireless);
+message.SetFromSMS("5555555556", Carrier.ATTWireless);
 message.Subject = "Example Subject";
 message.SetBody("Example Body");
 
